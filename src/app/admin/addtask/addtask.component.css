@@ -1,0 +1,33 @@
+/* Ensure the main container is properly offset from fixed sidebar and navbar */
+.main-container {
+    margin-left: 250px; /* Space for the sidebar */
+    margin-top: 56px; /* Space for the navbar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    min-height: calc(100vh - 56px); /* Full height minus navbar height */
+  }
+  
+  /* Styling for the content container */
+  .container {
+    width: 100%;
+    max-width: 600px; /* Optional: Adjust max-width as needed */
+    padding: 20px;
+    padding-top: 150px;
+    background-color: #fff; /* Background color for better contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visual separation */
+    border-radius: 8px; /* Optional: Rounded corners for aesthetics */
+    text-align: center; /* Center text inside the container */
+  }
+  
+  /* Optional: Adjustments for form controls */
+  .form-control {
+    max-width: 100%;
+  }
+  
+  /* Optional: Style for buttons */
+  .btn-primary {
+    width: 100%; /* Full width for the button */
+  }
+  

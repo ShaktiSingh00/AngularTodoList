@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="container">
+    <h1>User Management</h1>
+  
+    <ul class="list-group mb-3">
+      <li *ngFor="let user of users; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+        {{ user.name }}, {{ user.email }}, {{ user.contact }}
+        <div>
+          <button (click)="editUser(i)" class="btn btn-sm btn-warning mr-2">Edit</button>
+          <button (click)="deleteUser(user.id)" class="btn btn-sm btn-danger">Delete</button>
+        </div>
+      </li>
+    </ul>
+    <div *ngIf="userToEdit" class="mb-3">
+      <h2>Edit User</h2>
+      <input type="text" [(ngModel)]="userToEdit.name" placeholder="Name" class="form-control mb-2" required>
+      <input type="email" [(ngModel)]="userToEdit.email" placeholder="Email" class="form-control mb-2" required>
+      <input type="number" [(ngModel)]="userToEdit.contact" placeholder="Contact" class="form-control mb-2" required>
+      <button (click)="updateUser()" class="btn btn-primary">Update User</button>
+    </div>
+  
+    <button (click)="navigateToAddTask()" class="btn btn-primary mb-3">Add User</button>
+  </div>
+
+<app-footer></app-footer>
+  

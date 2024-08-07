@@ -1,0 +1,52 @@
+/* Container for the entire layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  /* Sidebar styling */
+  app-sidebar {
+    background-color: #991067; 
+    height: 100vh; /* Full viewport height */
+    width: 250px; /* Width of the sidebar */
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* Text color */
+    position: fixed; /* Fixed positioning on the left */
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-top: 20px; /* Padding from top */
+    z-index: 1000; /* Ensure it stays on top */
+  }
+  
+  /* Content area */
+  .content {
+    margin-left: 350px; /* Leave space for the sidebar */
+    flex: 1; /* Fill remaining space */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: #991067; /* Light background color */
+    z-index: 999; /* Ensure it stays on top of content */
+    width: calc(100% - 250px); /* Width adjusted to leave space for the sidebar */
+    margin-left: 250px; /* Shift navbar to the right of the sidebar */
+    position: fixed; /* Fix navbar position */
+    top: 0; /* Align to top */
+    font-size: larger;
+    padding: 40px;
+    font-weight: 600;
+    gap: 20px;
+
+  }
+  
+  /* Main content area below the navbar */
+  .main-content {
+    margin-top: 56px; /* Adjust for navbar height */
+    padding: 20px;
+    flex: 1;
+  }
+  

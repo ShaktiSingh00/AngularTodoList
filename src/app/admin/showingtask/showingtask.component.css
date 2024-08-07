@@ -1,0 +1,23 @@
+/* Container for the entire layout */
+.main-container {
+    margin-left: 150px; /* Space for the sidebar */
+    margin-top: 56px; /* Space for the navbar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    min-height: calc(100vh - 56px); /* Full height minus the navbar height */
+  }
+  
+  /* Ensure that the container takes up the available width */
+  .container {
+    width: 100%;
+    max-width: 800px; /* Optional: Max width for better readability */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visual separation */
+    padding: 20px;
+    padding-top: 150px;
+    padding-left: 10px;
+    background-color: #fff; /* Background color for better contrast */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+  }
+  
